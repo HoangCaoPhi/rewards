@@ -6,8 +6,7 @@
       "src\\BuildingBlocks\\ServiceDefaults\\ServiceDefaults.csproj",
       "src\\BuildingBlocks\\Shared\\Shared.csproj",
       "src\\Gateways\\Orchestration\\Orchestration.csproj",
-      "src\\Services\\FollowTwitterVerifier\\FollowTwitterVerifier.csproj",
-      "src\\UIs\\rewards-ui\\rewards-ui.esproj"
+      "src\\Services\\FollowTwitterVerifier\\FollowTwitterVerifier.csproj"
     ]
   }
 }
