@@ -28,10 +28,10 @@ builder.AddNpmApp(name: "rewards-ui",
 
 builder.Build().Run();
 
-
+// Serves for testing environment
 static bool ShouldUseHttpForEndpoints()
 {
-    const string EnvVarName = "ESHOP_USE_HTTP_ENDPOINTS";
+    const string EnvVarName = "REWARDS_USE_HTTP_ENDPOINTS";
     var envValue = Environment.GetEnvironmentVariable(EnvVarName);
      
     return int.TryParse(envValue, out int result) && result == 1;

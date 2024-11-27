@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "path": "Rewards.sln",
+    "projects": [
+      "src\\AppHost\\Rewards.AppHost.csproj",
+      "src\\BuildingBlocks\\ServiceDefaults\\ServiceDefaults.csproj",
+      "src\\BuildingBlocks\\Shared\\Shared.csproj",
+      "src\\Gateways\\Orchestration\\Orchestration.csproj",
+      "src\\Services\\FollowTwitterVerifier\\FollowTwitterVerifier.csproj",
+      "src\\UIs\\rewards-ui\\rewards-ui.esproj"
+    ]
+  }
+}
