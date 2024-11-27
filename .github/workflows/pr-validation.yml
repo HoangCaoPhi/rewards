@@ -1,0 +1,23 @@
+name: Rewards Pull Request Validation
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+
+jobs:  
+  test:
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET (global.json)
+        uses: actions/setup-dotnet@v3
+      - name: Build 
+        run: dotnet build Rewards.slnf
+      - name: Test
+        run: dotnet test Rewards.slnf
