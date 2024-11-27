@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIs", "UIs", "{1FB44368-E51
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "rewards-ui", "src\UIs\rewards-ui\rewards-ui.esproj", "{A9BCEE65-187A-403B-918B-6BB04B318FE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\BuildingBlocks\Shared\Shared.csproj", "{8FE85ED9-8868-4299-B4DD-A50D04EA16AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8FE85ED9-8868-4299-B4DD-A50D04EA16AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE85ED9-8868-4299-B4DD-A50D04EA16AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE85ED9-8868-4299-B4DD-A50D04EA16AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE85ED9-8868-4299-B4DD-A50D04EA16AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 		{CD4DF250-C0C5-4280-9C28-6BBFC8635519} = {D6206EF7-1D13-454D-9CE2-6D9DF8FF7678}
 		{F631E1DD-9576-4A24-BF3D-5637A79D9F86} = {277B5376-A92D-4041-8446-5BA9790D111B}
 		{A9BCEE65-187A-403B-918B-6BB04B318FE4} = {1FB44368-E511-4FAA-8C35-447204E29B83}
+		{8FE85ED9-8868-4299-B4DD-A50D04EA16AA} = {AFEF4116-14D1-412C-8933-D532BE593188}
 	EndGlobalSection
 EndGlobal

@@ -1,8 +1,23 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<Projects.Orchestration>("orchestration");
+var sqlPassword = builder.AddParameter("sql-password", secret: true);
 
-builder.AddProject<Projects.FollowTwitterVerifier>("followtwitterverifier");
+var mssql = builder.AddSqlServer("sql", password: sqlPassword)
+                   .WithLifetime(ContainerLifetime.Persistent);
+
+var orchestrationDb = mssql.AddDatabase("orchestration-db");
+var followtwitterverifierDb = mssql.AddDatabase("followtwitterverifier-db");
+
+
+var launchProfileName = ShouldUseHttpForEndpoints() ? "http" : "https";
+
+builder.AddProject<Projects.Orchestration>("orchestration", launchProfileName: launchProfileName)
+       .WaitFor(mssql)
+       .WithReference(orchestrationDb);
+
+builder.AddProject<Projects.FollowTwitterVerifier>("followtwitterverifier", launchProfileName: launchProfileName)
+       .WaitFor(mssql)
+       .WithReference(followtwitterverifierDb);
 
 builder.AddNpmApp(name: "rewards-ui",
                   workingDirectory: "../UIs/rewards-ui",
@@ -12,3 +27,12 @@ builder.AddNpmApp(name: "rewards-ui",
             .PublishAsDockerFile();
 
 builder.Build().Run();
+
+
+static bool ShouldUseHttpForEndpoints()
+{
+    const string EnvVarName = "ESHOP_USE_HTTP_ENDPOINTS";
+    var envValue = Environment.GetEnvironmentVariable(EnvVarName);
+     
+    return int.TryParse(envValue, out int result) && result == 1;
+}
