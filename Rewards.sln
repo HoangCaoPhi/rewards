@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewards.AppHost", "src\AppHost\Rewards.AppHost.csproj", "{9C9F3481-2657-43D6-BF69-2280E910A8AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{AFEF4116-14D1-412C-8933-D532BE593188}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{D6206EF7-1D13-454D-9CE2-6D9DF8FF7678}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{277B5376-A92D-4041-8446-5BA9790D111B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDefaults", "src\BuildingBlocks\ServiceDefaults\ServiceDefaults.csproj", "{52FFCDC7-039B-425D-BC9A-28A14FF254D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchestration", "src\Gateways\Orchestration\Orchestration.csproj", "{CD4DF250-C0C5-4280-9C28-6BBFC8635519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FollowTwitterVerifier", "src\Services\FollowTwitterVerifier\FollowTwitterVerifier.csproj", "{F631E1DD-9576-4A24-BF3D-5637A79D9F86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{37F9BD06-C132-49E0-9F9F-BEEAC53FB56E}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIs", "UIs", "{1FB44368-E511-4FAA-8C35-447204E29B83}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "rewards-ui", "src\UIs\rewards-ui\rewards-ui.esproj", "{A9BCEE65-187A-403B-918B-6BB04B318FE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C9F3481-2657-43D6-BF69-2280E910A8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9F3481-2657-43D6-BF69-2280E910A8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9F3481-2657-43D6-BF69-2280E910A8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9F3481-2657-43D6-BF69-2280E910A8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52FFCDC7-039B-425D-BC9A-28A14FF254D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52FFCDC7-039B-425D-BC9A-28A14FF254D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52FFCDC7-039B-425D-BC9A-28A14FF254D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52FFCDC7-039B-425D-BC9A-28A14FF254D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4DF250-C0C5-4280-9C28-6BBFC8635519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4DF250-C0C5-4280-9C28-6BBFC8635519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4DF250-C0C5-4280-9C28-6BBFC8635519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4DF250-C0C5-4280-9C28-6BBFC8635519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F631E1DD-9576-4A24-BF3D-5637A79D9F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F631E1DD-9576-4A24-BF3D-5637A79D9F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F631E1DD-9576-4A24-BF3D-5637A79D9F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F631E1DD-9576-4A24-BF3D-5637A79D9F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9BCEE65-187A-403B-918B-6BB04B318FE4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52FFCDC7-039B-425D-BC9A-28A14FF254D0} = {AFEF4116-14D1-412C-8933-D532BE593188}
+		{CD4DF250-C0C5-4280-9C28-6BBFC8635519} = {D6206EF7-1D13-454D-9CE2-6D9DF8FF7678}
+		{F631E1DD-9576-4A24-BF3D-5637A79D9F86} = {277B5376-A92D-4041-8446-5BA9790D111B}
+		{A9BCEE65-187A-403B-918B-6BB04B318FE4} = {1FB44368-E511-4FAA-8C35-447204E29B83}
+	EndGlobalSection
+EndGlobal
