@@ -5,9 +5,9 @@
       "src\\AppHost\\Rewards.AppHost.csproj",
       "src\\BuildingBlocks\\ServiceDefaults\\ServiceDefaults.csproj",
       "src\\BuildingBlocks\\Shared\\Shared.csproj",
-      "src\\Gateways\\Gateway\\Gateway.csproj",
-      "src\\Services\\TwitterVerifier\\TwitterVerifier.csproj",
-      "src\\Services\\Management\\Management.csproj"	  
+      "src\\Gateways\\Orchestration\\Gateway.csproj",
+      "src\\Services\\FollowTwitterVerifier\\TwitterVerifier.csproj",
+      "src\\Services\\Management\\Management.csproj"
     ]
   }
 }
