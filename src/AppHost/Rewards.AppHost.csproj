@@ -19,8 +19,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Gateways\Orchestration\Orchestration.csproj" />
-		<ProjectReference Include="..\Services\FollowTwitterVerifier\FollowTwitterVerifier.csproj" />
+		<ProjectReference Include="..\Gateways\Orchestration\Gateway.csproj" />
+		<ProjectReference Include="..\Services\FollowTwitterVerifier\TwitterVerifier.csproj" />
+		<ProjectReference Include="..\Services\Management\Management.csproj" />
 	</ItemGroup>
 
 	<Target Name="RestoreNpm" BeforeTargets="Build" Condition=" '$(DesignTimeBuild)' != 'true' ">

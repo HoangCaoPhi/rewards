@@ -11,11 +11,11 @@ var followtwitterverifierDb = mssql.AddDatabase("followtwitterverifier-db");
 
 var launchProfileName = ShouldUseHttpForEndpoints() ? "http" : "https";
 
-builder.AddProject<Projects.Orchestration>("orchestration", launchProfileName: launchProfileName)
+builder.AddProject<Projects.Management>("orchestration", launchProfileName: launchProfileName)
        .WaitFor(mssql)
        .WithReference(orchestrationDb);
 
-builder.AddProject<Projects.FollowTwitterVerifier>("followtwitterverifier", launchProfileName: launchProfileName)
+builder.AddProject<Projects.TwitterVerifier>("followtwitterverifier", launchProfileName: launchProfileName)
        .WaitFor(mssql)
        .WithReference(followtwitterverifierDb);
 
@@ -25,6 +25,8 @@ builder.AddNpmApp(name: "rewards-ui",
             .WithHttpEndpoint(env: "FE_PORT")
             .WithExternalHttpEndpoints()
             .PublishAsDockerFile();
+
+builder.AddProject<Projects.Management>("management");
 
 builder.Build().Run();
 
